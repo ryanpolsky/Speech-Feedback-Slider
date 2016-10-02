@@ -28,6 +28,7 @@ class ViewController2: UIViewController, ChartViewDelegate {
         
         lineView.delegate = self
         
+        //create arrays for x and y values from dictionary
         var x = [Double]()
         var y = [Double]()
         for index in 0...(self.delegate!.count-1){
@@ -50,12 +51,8 @@ class ViewController2: UIViewController, ChartViewDelegate {
         lineView.noDataText = "No data to display"
         
         var dataEntries: [ChartDataEntry] = []
-        //var d = ChartDataEntry(x: <#T##Double#>, y: <#T##Double#>)
-        
-        
+        //Create a dataEntry object for each point and add to an array of all data entries
         for i in 0..<dataPoints.count {
-            
-            
             let dataEntry = ChartDataEntry(x: dataPoints[i], y: values[i])
             dataEntries.append(dataEntry)
         }
