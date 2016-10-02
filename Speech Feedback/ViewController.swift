@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ViewController2Delegate {
     
     var timer = Timer()
     var count = 0
-    
+    //var passedDictionary: NSMutableDictionary = [:]
+    //var passedCount = 0
     
     var dictionary = NSMutableDictionary()
     
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func valueChanged(_ sender: AnyObject) {
-        
+        //snaps slider to interger values 
        let intValue = (Int) (slider.value)
         let rounded = Float(intValue)
         slider.setValue( rounded, animated: true)
@@ -73,10 +74,12 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "result"){
-            let dest = segue.destination as? ViewController2
-            dest?.dataDictionary = self.dictionary
-            dest?.count = self.count
+        if (segue.identifier == "results"){
+            let dest = segue.destination as! ViewController2
+            dest.delegate = self
+            
+            
+          
             
         }
     }

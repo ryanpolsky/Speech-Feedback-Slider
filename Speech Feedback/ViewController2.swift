@@ -9,28 +9,35 @@
 import UIKit
 import Charts
 
+
+protocol ViewController2Delegate {
+    
+    var dictionary: NSMutableDictionary {get set}
+    var count: Int {get set}
+    
+}
+
 class ViewController2: UIViewController, ChartViewDelegate {
 
     @IBOutlet var lineView: LineChartView!
-    var dataDictionary = NSMutableDictionary()
-    var count = 0
+    var delegate: ViewController2Delegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lineView.delegate = self
-        //print(dest.count)
         
         var x = [Double]()
         var y = [Double]()
-        for (index, value) in dataDictionary{
-            x.append(index as! Double)
-            y.append(value as! Double)
+        for index in 0...(self.delegate!.count-1){
+            let doubleX = Double(index)
+            x.append(doubleX)
+            y.append(self.delegate!.dictionary[index] as! Double)
         }
         
         
-        //x = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
-        //y = [2,4,1,3,5,4,2,3,1,2]
+        
         
     
         
