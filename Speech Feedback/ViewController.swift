@@ -47,9 +47,9 @@ class ViewController: UIViewController, ViewController2Delegate, UITableViewDele
 
     @IBAction func valueChanged(_ sender: AnyObject) {
     //snaps slider to interger values
-       let intValue = (Int) (slider.value)
-        let rounded = Float(intValue)
-        slider.setValue( rounded, animated: true)
+       //let intValue = (Int) (slider.value)
+        //let rounded = Float(intValue)
+        //slider.setValue( rounded, animated: true)
     }
     @IBAction func timerStarted(_ sender: AnyObject) {
         //Stops timer in case button is pressed multiple times accidentally

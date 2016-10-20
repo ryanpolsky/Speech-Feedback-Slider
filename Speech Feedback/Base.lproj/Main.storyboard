@@ -56,18 +56,18 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vrj-dB-UdI" id="jes-0m-qyp">
-                                            <frame key="frameInset" width="240" height="105"/>
+                                            <frame key="frameInset" width="240" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ep9-lU-ZNl">
-                                                    <frame key="frameInset" minX="15" minY="35" width="34" height="21"/>
+                                                    <frame key="frameInset" minX="15" minY="36" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uNL-xJ-N8I">
-                                                    <frame key="frameInset" minX="15" minY="56" width="44" height="15"/>
+                                                    <frame key="frameInset" minX="15" minY="56.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1498" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Admin View Controller-->
         <scene sceneID="jgV-lS-b6w">
             <objects>
-                <viewController id="uC0-T9-0YL" sceneMemberID="viewController">
+                <viewController id="uC0-T9-0YL" customClass="AdminViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z1h-u6-Xoo"/>
                         <viewControllerLayoutGuide type="bottom" id="ei9-EK-6qd"/>
@@ -140,6 +140,16 @@
                     <view key="view" contentMode="scaleToFill" id="QMJ-XI-yrO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDo-z5-HE8">
+                                <frame key="frameInset" minX="143" minY="526" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post Coment"/>
+                                <connections>
+                                    <action selector="post:" destination="uC0-T9-0YL" eventType="touchUpInside" id="CQl-DM-ar9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -155,7 +165,7 @@
                         <viewControllerLayoutGuide type="top" id="RDk-aK-InN"/>
                         <viewControllerLayoutGuide type="bottom" id="Fs5-e3-8Cu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7TJ-5X-YV8">
+                    <view key="view" contentMode="scaleToFill" id="7TJ-5X-YV8" customClass="LoginViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
